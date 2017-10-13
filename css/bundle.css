@@ -1,0 +1,830 @@
+/* myReset:Start*/
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+    border: 0;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+button,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    font: inherit;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: 0;
+}
+
+main,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    font: normal 100% Cambria, Georgia, serif;
+    line-height: 1;
+    height: 100%;
+    color: #000;
+}
+
+/* END:myReset */
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../fonts/Roboto/Roboto-Regular/Roboto-Regular.eot');
+    src: url('../fonts/Roboto/Roboto-Regular/Roboto-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto/Roboto-Regular/Roboto-Regular.woff') format('woff'), url('../fonts/Roboto/Roboto-Regular/Roboto-Regular.ttf') format('truetype'), url('../fonts/Roboto/Roboto-Regular/Roboto-Regular.svg#Roboto') format('svg');
+}
+
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url('../fonts/Roboto/Roboto-Medium/Roboto-Medium.eot');
+    src: url('../fonts/Roboto/Roboto-Medium/Roboto-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto/Roboto-Medium/Roboto-Medium.woff') format('woff'), url('../fonts/Roboto/Roboto-Medium/Roboto-Medium.ttf') format('truetype'), url('../fonts/Roboto/Roboto-Medium/Roboto-Medium.svg#Roboto') format('svg');
+}
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('../fonts/Roboto/Roboto-Bold/Roboto-Bold.eot');
+    src: url('../fonts/Roboto/Roboto-Bold/Roboto-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto/Roboto-Bold/Roboto-Bold.woff') format('woff'), url('../fonts/Roboto/Roboto-Bold/Roboto-Bold.ttf') format('truetype'), url('../fonts/Roboto/Roboto-Bold/Roboto-Bold.svg#Roboto') format('svg');
+}
+
+.nav-wrapper {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 50.3em;
+    height: 100%;
+}
+
+.nav-hidden {
+    position: absolute;
+    top: 0;
+    left: 3.6em;
+    display: none;
+    width: 40.6em;
+    height: 100%;
+    background: url('../img/bg_fx_menu.png');
+}
+
+.nav-hidden__holder {
+    position: absolute;
+    top: 15em;
+    left: 17.3em;
+}
+
+.nav-hidden-title {
+    font-family: 'Roboto-Bold';
+    font-size: 2.2em;
+    display: block;
+    margin-bottom: 80px;
+    padding-left: 15px;
+    color: #fff;
+}
+
+.nav-hidden-list__item {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.nav-hidden-list__item span {
+    font-family: 'Roboto-Bold';
+    font-size: 20px;
+    display: inline-block;
+    padding: 10px 15px;
+    -webkit-transition: all .15s ease-in;
+    -moz-transition: all .15s ease-in;
+    -o-transition: all .15s ease-in;
+    transition: all .15s ease-in;
+    color: #949492;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+.nav-hidden-list__item span:hover {
+    font-family: 'Roboto-Bold';
+    color: #000;
+    background: #ffde39;
+    -webkit-box-shadow: 2px 4px 16px -3px #000;
+    -moz-box-shadow: 2px 4px 16px -3px #000;
+    box-shadow: 2px 4px 16px -3px #000;
+}
+
+.nav-hidden-list__item span:focus {
+    font-family: 'Roboto-Bold';
+    color: #000;
+    outline: none;
+    background: #ffde39;
+    -webkit-box-shadow: 2px 4px 16px -3px #000;
+    -moz-box-shadow: 2px 4px 16px -3px #000;
+    box-shadow: 2px 4px 16px -3px #000;
+}
+
+.nav-hidden-list__item:focus {
+    outline: none;
+}
+
+.nav {
+    display: inline-block;
+    overflow: hidden;
+    width: 148px;
+    height: 100%;
+    background: url('../img/bg_fx_innerpage.png');
+}
+
+.nav-arrow {
+    position: absolute;
+    z-index: 101;
+    top: 50%;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background: #242c33;
+    -webkit-box-shadow: 2px 4px 16px -3px #000;
+    -moz-box-shadow: 2px 4px 16px -3px #000;
+    box-shadow: 2px 4px 16px -3px #000;
+}
+
+.nav-arrow:focus {
+    outline: none;
+    -webkit-box-shadow: 0 0 0 2px #ff0;
+    -moz-box-shadow: 0 0 0 2px #ff0;
+    box-shadow: 0 0 0 2px #ff0;
+}
+
+.nav-arrow::before {
+    position: absolute;
+    top: 20px;
+    left: 17px;
+    width: 11px;
+    height: 2px;
+    content: '';
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    background: #fff;
+}
+
+.nav-arrow::after {
+    position: absolute;
+    top: 27px;
+    left: 17px;
+    width: 11px;
+    height: 2px;
+    content: '';
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background: #fff;
+}
+
+.content {
+    display: block;
+}
+
+.content-row {
+    font-size: 0;
+    display: block;
+    overflow: auto;
+    width: 100%;
+}
+
+.card {
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    width: 200px;
+    height: 300px;
+    margin: 0 10px 20px 10px;
+    -webkit-transition: all .15s ease-in;
+    -moz-transition: all .15s ease-in;
+    -o-transition: all .15s ease-in;
+    transition: all .15s ease-in;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.card:focus {
+    -webkit-box-shadow: -9px 9px #ffde39;
+    -moz-box-shadow: -9px 9px #ffde39;
+    box-shadow: -9px 9px #ffde39;
+}
+
+.card:focus .card-title {
+    bottom: 2.2em;
+    left: 1em;
+}
+
+.card:focus .card-title-hide {
+    opacity: 1;
+}
+
+.card:hover {
+    -webkit-box-shadow: -9px 9px #ffde39;
+    -moz-box-shadow: -9px 9px #ffde39;
+    box-shadow: -9px 9px #ffde39;
+}
+
+.card:hover .card-title {
+    bottom: 2.2em;
+    left: 1em;
+}
+
+.card:hover .card-title-hide {
+    opacity: 1;
+}
+
+.card-body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url('https://i.pinimg.com/236x/63/9a/0a/639a0a64cb485e51af053e6403a00289--captain-america--steve-rogers.jpg');
+}
+
+.card-title {
+    font-family: 'Roboto-Medium';
+    font-size: 15px;
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+    -webkit-transition: all .15s ease-in;
+    -moz-transition: all .15s ease-in;
+    -o-transition: all .15s ease-in;
+    transition: all .15s ease-in;
+    text-transform: uppercase;
+    color: #ffde39;
+}
+
+.card-title-hide {
+    font-family: 'Roboto-Medium';
+    font-size: 14px;
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+    -webkit-transition: all .15s ease-in;
+    -moz-transition: all .15s ease-in;
+    -o-transition: all .15s ease-in;
+    transition: all .15s ease-in;
+    opacity: 0;
+    color: #fff;
+}
+
+.description {
+    padding: 20px;
+}
+
+.description-text__title {
+    font-family: 'Roboto-Bold';
+    font-size: 3em;
+    display: block;
+    margin-bottom: .6em;
+    color: #fff;
+}
+
+.description-text__subtitle {
+    font-family: 'Roboto-Bold';
+    font-size: 1em;
+    text-transform: uppercase;
+    color: #ffde39;
+}
+
+.description-text__desc {
+    font-family: 'Roboto-Regular';
+    font-size: 1em;
+    line-height: 1.3;
+    width: 50em;
+    margin-bottom: 1em;
+    color: #fff;
+}
+
+.description-text__count {
+    display: block;
+    margin-bottom: 1em;
+}
+
+.description-text__count .icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    background: url('../img/layers.png');
+}
+
+.description-text__count .descroption-title {
+    font-family: 'Roboto-Regular';
+    font-size: .8em;
+    display: inline-block;
+    vertical-align: middle;
+    opacity: .6;
+    color: #fff;
+}
+
+.description-action {
+    position: relative;
+    padding: 20px 0;
+}
+
+.sort-card {
+    position: absolute;
+    top: 1.3em;
+    right: 0;
+    display: inline-block;
+}
+
+.sort-card__title {
+    font-family: 'Roboto-Bold';
+    font-size: 1em;
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    padding: .8em 3em;
+    -webkit-transition: all .15s ease-in;
+    -moz-transition: all .15s ease-in;
+    -o-transition: all .15s ease-in;
+    transition: all .15s ease-in;
+    color: #c0c0c0;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
+    -webkit-box-shadow: inset 0 0 0 2px #c0c0c0;
+    -moz-box-shadow: inset 0 0 0 2px #c0c0c0;
+    box-shadow: inset 0 0 0 2px #c0c0c0;
+}
+
+.sort-card__title:hover {
+    color: #fff;
+    background: #242c33;
+    -webkit-box-shadow: 0 5px 9px #000;
+    -moz-box-shadow: 0 5px 9px #000;
+    box-shadow: 0 5px 9px #000;
+}
+
+.sort-card__title:focus {
+    color: #fff;
+    outline: none;
+    background: #242c33;
+    -webkit-box-shadow: 0 5px 9px #000;
+    -moz-box-shadow: 0 5px 9px #000;
+    box-shadow: 0 5px 9px #000;
+}
+
+.sort-card__title span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.sort-card__title .icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-left: .3em;
+    vertical-align: middle;
+    background: url('../img/down-arrow.png');
+}
+
+.sort-card__title.active {
+    color: #fff;
+    background: #242c33;
+    -webkit-box-shadow: 0 5px 9px #000;
+    -moz-box-shadow: 0 5px 9px #000;
+    box-shadow: 0 5px 9px #000;
+}
+
+.sort-card-list {
+    position: absolute;
+    z-index: 9;
+    z-index: 1;
+    top: 2.7em;
+    left: 1em;
+    display: none;
+    width: 88%;
+}
+
+.sort-card-list.active {
+    display: block;
+    -webkit-box-shadow: 0 2px 20px 3px black;
+    -moz-box-shadow: 0 2px 20px 3px black;
+    box-shadow: 0 2px 20px 3px black;
+}
+
+.sort-card-list__item {
+    font-family: 'Roboto-Bold';
+    font-size: 1em;
+    display: block;
+    width: 100%;
+    padding: 1em;
+    -webkit-transition: all .15s ease-in;
+    -moz-transition: all .15s ease-in;
+    -o-transition: all .15s ease-in;
+    transition: all .15s ease-in;
+    text-align: center;
+    color: #fff;
+    border-top: 2px solid #000;
+    background: #242c33;
+}
+
+.sort-card-list__item:hover {
+    color: #4a4a4a;
+    color: #000;
+    background: yellow;
+}
+
+.sort-card-list__item:focus {
+    color: #000;
+    outline: none;
+    background: yellow;
+}
+
+.collection-wrapper {
+    position: absolute;
+    top: 18em;
+    right: -10em;
+    overflow: hidden;
+    height: 28em;
+    white-space: nowrap;
+}
+
+.collection {
+    position: relative;
+    z-index: 9;
+    display: inline-block;
+    width: 37em;
+    height: 24.6em;
+    margin: 20px;
+    background: #ccc;
+}
+
+.collection:hover .collection-back__one {
+    top: 5px;
+    left: -5px;
+}
+
+.collection:hover .collection-back__two {
+    top: 10px;
+    left: -10px;
+}
+
+.collection:focus {
+    outline: none;
+}
+
+.collection:focus .collection-back__one {
+    top: 5px;
+    left: -5px;
+}
+
+.collection:focus .collection-back__two {
+    top: 10px;
+    left: -10px;
+}
+
+.collection-back__one {
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all .15s ease-in;
+    -moz-transition: all .15s ease-in;
+    -o-transition: all .15s ease-in;
+    transition: all .15s ease-in;
+    background: #242c33;
+    -webkit-box-shadow: 0 0 10px 0 black;
+    -moz-box-shadow: 0 0 10px 0 black;
+    box-shadow: 0 0 10px 0 black;
+}
+
+.collection-back__two {
+    position: absolute;
+    z-index: -1;
+    top: 20px;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all .15s ease-in;
+    -moz-transition: all .15s ease-in;
+    -o-transition: all .15s ease-in;
+    transition: all .15s ease-in;
+    background: #161f26;
+    -webkit-box-shadow: 0 0 10px 0 black;
+    -moz-box-shadow: 0 0 10px 0 black;
+    box-shadow: 0 0 10px 0 black;
+}
+
+.collection-holder {
+    position: relative;
+    z-index: 1;
+    display: block;
+    overflow: hidden;
+    width: 37em;
+    height: 24.6em;
+    text-align: center;
+    background: url('http://img.wennermedia.com/article-leads-horizontal/rs-242957-xmen.jpg');
+    -webkit-box-shadow: 0 0 10px 0 black;
+    -moz-box-shadow: 0 0 10px 0 black;
+    box-shadow: 0 0 10px 0 black;
+}
+
+.collection-holder::after {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    opacity: .5;
+    background: #000;
+}
+
+.collection-title {
+    font-family: 'Roboto-Bold';
+    font-size: .9em;
+    display: block;
+    margin-bottom: .4em;
+    text-transform: uppercase;
+    color: #ffde39;
+}
+
+.collection-subtitle {
+    font-family: 'Roboto-Regular';
+    font-size: 1.4em;
+    display: block;
+    color: #fff;
+}
+
+.collection-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 40px;
+    background: #949492;
+}
+
+.collection-count-holder {
+    position: absolute;
+    top: .6em;
+    left: .6em;
+}
+
+.collection-count__icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('../img/two-squares.png');
+}
+
+.collection-count__count {
+    font-family: 'Roboto-Regular';
+    font-size: 1.1em;
+    color: #fff;
+}
+
+.collection-text {
+    position: absolute;
+    top: 11em;
+    left: 14em;
+}
+
+.time {
+    position: absolute;
+    top: 4em;
+    right: 8em;
+    text-align: right;
+}
+
+.time-count {
+    font-family: 'Roboto-Bold';
+    font-size: 2.2em;
+    display: block;
+    margin-bottom: .2em;
+    color: #fff;
+}
+
+.time-day {
+    font-family: 'Roboto-Regular';
+    font-size: .8em;
+    display: block;
+    text-transform: uppercase;
+    opacity: .6;
+    color: #fff;
+}
+/*# sourceMappingURL=sourcemaps/assets.css.map */
+
+/*base*/
+
+/*header*/
+
+/*END:header*/
+
+/*footer*/
+
+/*END:footer*/
+
+html,
+body {
+    font-size: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    position: relative;
+    z-index: 1;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    padding-top: 3.2em;
+    background: url('https://lc-www-live-s.legocdn.com/r/www/r/catalogs/-/media/catalogs/activities/star%20wars/2016/posters/the%20force%20awakens%20video%20game%20may%20the%20fourth/douglas_may4th_poster_webpreview_1488x838_may.jpg?l.r2=853401640');
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+.wrapper::after {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: url('http://alanpride.com/admin/images/BG_Radial_gradient.png');
+}
+
+.clearfix:after,
+.myContainer:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.content-container {
+    position: absolute;
+    top: 3em;
+    right: 21.7%;
+    width: 69em;
+}
+
+.myContainer {
+    position: relative;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.btn {
+    font-family: 'Roboto-Bold';
+    font-size: 1em;
+    display: inline-block;
+    padding: .8em 4em;
+    -webkit-transition: all .15s ease-in;
+    -moz-transition: all .15s ease-in;
+    -o-transition: all .15s ease-in;
+    transition: all .15s ease-in;
+    color: #c0c0c0;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
+    -webkit-box-shadow: inset 0 0 0 2px #c0c0c0;
+    -moz-box-shadow: inset 0 0 0 2px #c0c0c0;
+    box-shadow: inset 0 0 0 2px #c0c0c0;
+}
+
+.btn:hover {
+    color: #000;
+    background: #ffde39;
+    -webkit-box-shadow: 0 3px 9px #000;
+    -moz-box-shadow: 0 3px 9px #000;
+    box-shadow: 0 3px 9px #000;
+}
+
+.btn:focus {
+    color: #000;
+    outline: none;
+    background: #ffde39;
+    -webkit-box-shadow: 0 3px 9px #000;
+    -moz-box-shadow: 0 3px 9px #000;
+    box-shadow: 0 3px 9px #000;
+}
+
+.btn.active {
+    color: #000;
+    background: #ffde39;
+    -webkit-box-shadow: 0 3px 9px #000;
+    -moz-box-shadow: 0 3px 9px #000;
+    box-shadow: 0 3px 9px #000;
+}
+
+/*END:base*/
+/*# sourceMappingURL=sourcemaps/base.css.map */
