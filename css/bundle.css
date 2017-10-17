@@ -360,7 +360,68 @@ body {
     -moz-transition: all .15s ease-in;
     -o-transition: all .15s ease-in;
     transition: all .15s ease-in;
-    background: url('https://i.pinimg.com/236x/63/9a/0a/639a0a64cb485e51af053e6403a00289--captain-america--steve-rogers.jpg');
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+.card-body.body-bg1 {
+    background: url('https://cdn.vox-cdn.com/thumbor/nWGjg39CW8TDciTxJ3qsSKJrN7w=/0x0:1381x1019/1200x800/filters:focal(581x400:801x620)/cdn.vox-cdn.com/uploads/chorus_image/image/54857225/xalien_covenant_fill.jpg.pagespeed.ic.rPyCbS72Kx.0.jpg') no-repeat center center;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+.card-body.body-bg2 {
+    background: url('https://upload.wikimedia.org/wikipedia/en/a/ad/Crimson_Peak_theatrical_poster.jpg') no-repeat center center;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+.card-body.body-bg3 {
+    background: url('https://moviefiles.alphacoders.com/534/poster-thumb-534.jpg') no-repeat center center;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+.card-body.body-bg4 {
+    background: url('https://www.virginmegastore.ae/medias/sys_master/root/h7d/hb8/8822717579294/Snow-White-and-the-Seven-Dwarfs-602070-Detail.jpg') no-repeat center center;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+.card-body.body-bg5 {
+    background: url('https://rickihobson.files.wordpress.com/2015/08/mv5bmtq4mjgwntmyov5bml5banbnxkftztgwmtc1mji0nde-1-_v1_sx640_sy720_.jpg?w=640') no-repeat center center;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+.card-body.body-bg6 {
+    background: url('http://cineplex.cdn2.dmlib.com/u/Assets/a1/DE/C0/a1-1014167/s1-9348508/p_800x1200_ForceAwakens_En_031916.jpg') no-repeat center center;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+.card-body.body-bg7 {
+    background: url('https://i.ytimg.com/vi/xHGqk5onVKw/maxresdefault.jpg') no-repeat center center;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+.card-body.body-bg8 {
+    background: url('https://upload.wikimedia.org/wikipedia/en/a/ad/Crimson_Peak_theatrical_poster.jpg') no-repeat center center;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+.card-body.body-bg9 {
+    background: url('https://image.tmdb.org/t/p/w300_and_h450_bestv2/4gxVAn1YLYqXAwidGanTD4RxIJT.jpg') no-repeat center center;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+.card-body.body-bg10 {
+    background: url('https://static1.squarespace.com/static/53323bb4e4b0cebc6a28ffa2/t/582a40aaebbd1a32fd82479d/1479164110252/Logan+Peru+poster') no-repeat center center;
+    -moz-background-size: cover;
+    background-size: cover;
 }
 
 .card-title {
@@ -646,7 +707,6 @@ body {
     width: 37em;
     height: 24.6em;
     text-align: center;
-    background: url('http://img.wennermedia.com/article-leads-horizontal/rs-242957-xmen.jpg');
     -webkit-box-shadow: 0 0 10px 0 black;
     -moz-box-shadow: 0 0 10px 0 black;
     box-shadow: 0 0 10px 0 black;
@@ -662,6 +722,24 @@ body {
     content: '';
     opacity: .5;
     background: #000;
+}
+
+.collection-holder.collection-bg1 {
+    background: url('https://cdn.vox-cdn.com/thumbor/1Tf2qV8_N6pjS2EpD-hc9HyqpEo=/0x0:810x987/1200x800/filters:focal(341x536:469x664)/cdn.vox-cdn.com/uploads/chorus_image/image/51357975/Logan-Poster-Hugh-Jackman-Wolverine-3.0.0.jpg') no-repeat center center;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+.collection-holder.collection-bg2 {
+    background: url('https://www.samaa.tv/wp-content/uploads/2016/02/frozen.jpg') no-repeat center center;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+.collection-holder.collection-bg3 {
+    background: url('https://cdn.vox-cdn.com/thumbor/nWGjg39CW8TDciTxJ3qsSKJrN7w=/0x0:1381x1019/1200x800/filters:focal(581x400:801x620)/cdn.vox-cdn.com/uploads/chorus_image/image/54857225/xalien_covenant_fill.jpg.pagespeed.ic.rPyCbS72Kx.0.jpg') no-repeat center center;
+    -moz-background-size: cover;
+    background-size: cover;
 }
 
 .collection-title {
@@ -763,12 +841,27 @@ body {
     width: 100%;
     height: 100%;
     padding-top: 3.2em;
-    background: url('https://lc-www-live-s.legocdn.com/r/www/r/catalogs/-/media/catalogs/activities/star%20wars/2016/posters/the%20force%20awakens%20video%20game%20may%20the%20fourth/douglas_may4th_poster_webpreview_1488x838_may.jpg?l.r2=853401640');
+    background: url('https://cdn-images-1.medium.com/max/1600/1*aT0YAgCTsQgGAO6K0TK0DA.jpeg');
     -moz-background-size: cover;
     background-size: cover;
 }
 
 .wrapper::after {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: url('http://alanpride.com/admin/images/BG_Radial_gradient.png');
+}
+
+.wrapper--inner {
+    background: url('https://i.imgur.com/Z2lWU8K.jpg');
+}
+
+.wrapper--inner::after {
     position: absolute;
     z-index: -1;
     top: 0;
