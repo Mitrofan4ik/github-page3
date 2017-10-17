@@ -296,6 +296,7 @@ body {
     display: block;
     overflow: auto;
     width: 100%;
+    padding: 20px 0;
 }
 
 .card {
@@ -315,9 +316,7 @@ body {
 }
 
 .card:focus {
-    -webkit-box-shadow: -9px 9px #ffde39;
-    -moz-box-shadow: -9px 9px #ffde39;
-    box-shadow: -9px 9px #ffde39;
+    outline: none;
 }
 
 .card:focus .card-title {
@@ -329,7 +328,9 @@ body {
     opacity: 1;
 }
 
-.card:hover {
+.card:focus .card-body {
+    margin: -9px 9px;
+    outline: none;
     -webkit-box-shadow: -9px 9px #ffde39;
     -moz-box-shadow: -9px 9px #ffde39;
     box-shadow: -9px 9px #ffde39;
@@ -344,10 +345,21 @@ body {
     opacity: 1;
 }
 
+.card:hover .card-body {
+    margin: -9px 9px;
+    -webkit-box-shadow: -9px 9px #ffde39;
+    -moz-box-shadow: -9px 9px #ffde39;
+    box-shadow: -9px 9px #ffde39;
+}
+
 .card-body {
     position: relative;
     width: 100%;
     height: 100%;
+    -webkit-transition: all .15s ease-in;
+    -moz-transition: all .15s ease-in;
+    -o-transition: all .15s ease-in;
+    transition: all .15s ease-in;
     background: url('https://i.pinimg.com/236x/63/9a/0a/639a0a64cb485e51af053e6403a00289--captain-america--steve-rogers.jpg');
 }
 
@@ -380,7 +392,7 @@ body {
 }
 
 .description {
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .description-text__title {
@@ -437,21 +449,25 @@ body {
 .sort-card {
     position: absolute;
     top: 1.3em;
-    right: 0;
-    display: inline-block;
+    right: .9em;
+    width: 16em;
 }
 
 .sort-card__title {
     font-family: 'Roboto-Bold';
     font-size: 1em;
-    position: relative;
+    position: absolute;
     z-index: 2;
+    top: 0;
+    left: 0;
     display: inline-block;
-    padding: .8em 3em;
+    width: 100%;
+    padding: .8em;
     -webkit-transition: all .15s ease-in;
     -moz-transition: all .15s ease-in;
     -o-transition: all .15s ease-in;
     transition: all .15s ease-in;
+    text-align: center;
     color: #c0c0c0;
     -webkit-border-radius: 2em;
     -moz-border-radius: 2em;
@@ -501,17 +517,13 @@ body {
 }
 
 .sort-card-list {
-    position: relative;
+    position: absolute;
     z-index: 1;
-    top: 0;
-    left: 0;
+    top: 2.5em;
+    left: 1em;
     display: none;
-    width: 88%;
-    -webkit-transform: translateX(16px);
-    -moz-transform: translateX(16px);
-    -ms-transform: translateX(16px);
-    -o-transform: translateX(16px);
-    transform: translateX(16px);
+    width: 13.8em;
+    margin: 0 auto;
 }
 
 .sort-card-list.active {
