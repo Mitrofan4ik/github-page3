@@ -154,7 +154,6 @@ body {
     z-index: 999;
     top: 0;
     left: 0;
-    width: 50.3em;
     height: 100%;
 }
 
@@ -502,13 +501,17 @@ body {
 }
 
 .sort-card-list {
-    position: absolute;
-    z-index: 9;
+    position: relative;
     z-index: 1;
-    top: 2.7em;
-    left: 1em;
+    top: 0;
+    left: 0;
     display: none;
     width: 88%;
+    -webkit-transform: translateX(16px);
+    -moz-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    -o-transform: translateX(16px);
+    transform: translateX(16px);
 }
 
 .sort-card-list.active {
@@ -552,6 +555,7 @@ body {
     left: 15em;
     overflow: hidden;
     height: 28em;
+    padding: 20px;
     white-space: nowrap;
 }
 
@@ -561,7 +565,7 @@ body {
     display: inline-block;
     width: 37em;
     height: 24.6em;
-    margin: 20px;
+    margin: 0 20px;
     background: #ccc;
 }
 
