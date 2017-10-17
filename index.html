@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+    <meta name="viewport" content=" maximum-scale=1.0">
     <title>Title</title>
     <link rel="shortcut icon" type="image/x-icon" href="img/base/favicon.ico">
     
@@ -21,9 +21,9 @@
             <div class="nav-hidden__holder">
                 <span class="nav-hidden-title">Catalogue</span>
                 <div class="nav-hidden-list">
-                    <div class="nav-hidden-list__item"><span tabindex="1">Featured</span></div>
-                    <div class="nav-hidden-list__item"><span tabindex="1">Resently added</span></div>
-                    <div class="nav-hidden-list__item"><span tabindex="1">Best of Chatch-up</span></div>
+                    <div id="jsFeatured" class="nav-hidden-list__item active"><span tabindex="1">Featured</span></div>
+                    <div class="nav-hidden-list__item"><span tabindex="1">Recently Added</span></div>
+                    <div class="nav-hidden-list__item"><span tabindex="1">Best of Catch-Up</span></div>
                     <div class="nav-hidden-list__item"><span tabindex="1">Subscriptions</span></div>
                     <div class="nav-hidden-list__item"><span tabindex="1">Collections</span></div>
                     <div class="nav-hidden-list__item"><span tabindex="1">Browse</span></div>
@@ -35,8 +35,8 @@
     <div class="wrapper">
         <!-- START: time -->
         <div class="time">
-            <span class="time-count">16:45</span>
-            <span class="time-day">20 mar</span>
+            <span id="time" class="time-count">16:45</span>
+            <span id="date" class="time-day">20 mar</span>
         </div>
         <!-- END: time -->
         <!-- START: collection -->
