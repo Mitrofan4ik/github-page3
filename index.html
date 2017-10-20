@@ -5,33 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content=" maximum-scale=1.0">
     <title>Title</title>
-    <link rel="shortcut icon" type="image/x-icon" href="img/base/favicon.ico">
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="img/base/favicon.ico"> -->
     
     <link rel="stylesheet" href="css/bundle.css">
 </head>
 
 <body>
     <!-- wrapper -->
-    <!-- START: nav -->
     <div class="nav-wrapper">
+        <!-- START: nav -->
         <div class="nav">
-            <div class="nav-arrow -js-goto-startpage" tabindex="1"></div>
+            <div class="nav-arrow -js-goto-startpage" name="back" tabindex="1"></div>
         </div>
+        <!-- END: nav -->
+        <!-- START: nav menu -->
         <div class="nav-hidden">
             <div class="nav-hidden__holder">
                 <span class="nav-hidden-title">Catalogue</span>
-                <div class="nav-hidden-list">
-                    <div id="jsFeatured" class="nav-hidden-list__item active"><span tabindex="1">Featured</span></div>
-                    <div class="nav-hidden-list__item"><span tabindex="1">Recently Added</span></div>
-                    <div class="nav-hidden-list__item"><span tabindex="1">Best of Catch-Up</span></div>
-                    <div class="nav-hidden-list__item"><span tabindex="1">Subscriptions</span></div>
-                    <div class="nav-hidden-list__item"><span tabindex="1">Collections</span></div>
-                    <div class="nav-hidden-list__item"><span tabindex="1">Browse</span></div>
+                <div id="jsNavList" class="nav-hidden-list">
+                    <div id="jsFeatured" class="nav-hidden-list__item active"><span class="navHiddenItem" tabindex="1">Featured</span></div>
+                    <div class="nav-hidden-list__item"><span class="navHiddenItem" tabindex="1">Recently Added</span></div>
+                    <div class="nav-hidden-list__item"><span class="navHiddenItem" tabindex="1">Best of Catch-Up</span></div>
+                    <div class="nav-hidden-list__item"><span class="navHiddenItem" tabindex="1">Subscriptions</span></div>
+                    <div id="jsCollections" class="nav-hidden-list__item"><span class="navHiddenItem" tabindex="1">Collections</span></div>
+                    <div class="nav-hidden-list__item"><span class="navHiddenItem" tabindex="1">Browse</span></div>
                 </div>
             </div>
         </div>
+        <!-- END: nav menu -->
     </div>
-    <!-- END: nav -->
     <div class="wrapper">
         <!-- START: time -->
         <div class="time">
@@ -89,7 +91,13 @@
                     </div>
                 </div>
             </div>
+            <!-- START: hidden nav title block -->
+            <div class="collection-inner-title">
+                <span class="nav-inner-title">Browse</span>
+            </div>
+            <!-- END: hidden nav title block -->
         </div>
+
         <!-- END: collection -->
     </div>
     <!-- END:wrapper -->
